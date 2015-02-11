@@ -1,1 +1,21 @@
-Hello World
+<html>
+<head>
+  <meta charset="iso-8859-2">
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+</head>
+    
+    <body ng-app="nauka">
+      <div ng-controller="testController">
+       
+       Search criteria: <input type="text" ng-model="searchCriteria"/>
+       
+       <div ng-repeat="person in persons | filter: searchCriteria">
+	{{person.imie}}, {{person.nazwisko}}
+       </div>
+       
+      </div>
+    </body>
+    
+</html>
